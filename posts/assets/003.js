@@ -58,7 +58,6 @@ function polygon(x, y, radius, npoints) {
   endShape(CLOSE);
 }
 
-// function randoms() {
-//   clear()
-// draw()
-// }
+function windowResized() {
+  resizeCanvas(windowWidth, windowHeight);
+}
