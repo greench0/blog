@@ -5,7 +5,7 @@ function setup() {
 noLoop();
 
   slider = createSlider(6.25, 100, 50);
-  slider.position(20, 30);
+  slider.position(20, windowHeight/2);
   slider.style('width', '150px');
 
   // sliderStroke = createSlider(1, 7, 3);
@@ -20,8 +20,8 @@ function draw() {
   stroke('black');
   strokeWeight(1)
 
-let density = slider.value();
-let blockW = windowWidth /density;
+// let density = ;
+let blockW = windowWidth /slider.value();
 
 for (y=0; y < height; y = y + blockW) {
 for (x=0; x < width; x = x + blockW) {
@@ -40,7 +40,7 @@ else {
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-function mousePressed() {
-  clear();
-  redraw();
-}
+// function mousePressed() {
+//   clear();
+//   redraw();
+// }

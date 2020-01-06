@@ -6,14 +6,16 @@ html, body {
     overflow: hidden; /* Hide scrollbars */
     background-color: grey;
     font-family: 'Roboto', sans-serif;
+    color: white;
 }
  
 
 h1 {
-  font-weight:900;
-  font-size: 2.5em;
-
+  font-weight:400;
+  font-size: 2.25em;
+  color: white;
 }
+
 
 #top, #bottom, #left, #right {
 	background: white;
@@ -46,9 +48,16 @@ h1 {
       /* bottom: 0; */
       width: 100%;
       z-index: 5;
-      margin-top: 15px;
+      margin-top: -15px;
     }
 
+    .top h1 {
+      /* background-color: yellow; */
+      border-style: solid;
+      margin-bottom: 10px;
+      padding-bottom: 5px;
+  border-width: 0 0 2px 0;
+    }
 
 
     .bottom {
@@ -64,7 +73,7 @@ h1 {
 
     .top a:hover {
       color: black;
-      background-color: yellow;
+      /* background-color: yellow; */
     }
 
     a {
