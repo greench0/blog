@@ -1,0 +1,76 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  /* no more scroll bar */
+}
+ 
+.container {
+margin-top: 80px;
+}
+
+.date {
+/* margin-right: 20px; */
+padding: 8px 0 4px 0;
+border-top: 1px solid black !important;
+}
+
+h2 {
+font-size: 1.5em;
+}
+
+.card-text{
+  margin-top: -10px;
+  clear: both;
+}
+
+a {
+  font-family: 'Roboto', sans-serif;
+  color: black;
+}
+
+.card {
+    /* border-top: 1px solid black !important; */
+    border: 0;
+}
+
+.resize {
+  -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+  -webkit-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+  -moz-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+  -o-transition: width 1s ease-in-out, left 1.5s ease-in-out;
+  transition: width 1s ease-in-out, left 1.5s ease-in-out;
+}
+
+.card-body a:hover {
+  color:black;
+  background-color: yellow;
+}
+
+.card-title {
+margin: -20px 0 0 -21px;
+}
+
+.card-body p {
+margin: 4px 0 0 -21px;
+}
+
+
+
+/* [1] The container */
+.img-hover-zoom {
+  /* height: 300px; [1.1] Set it as per your need */
+  overflow: hidden; /* [1.2] Hide the overflowing of child elements */
+}
+
+
+/* [2] Transition property for smooth transformation of images */
+.img-hover-zoom img {
+  transition: transform .3s ease;
+  
+}
+
+/* [3] Finally, transforming the image when container gets hovered */
+.img-hover-zoom:hover img {
+  transform: scale(1.04);
+}
