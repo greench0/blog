@@ -4,16 +4,16 @@ function setup() {
   noFill()
   
   sliderCR = createSlider(40, 250, random(40,200));
-  sliderCR.position(15, windowHeight - 130);
+  sliderCR.position(25, windowHeight - 130);
   
   sliderA = createSlider(6, 60, random(6,40));
-  sliderA.position(15, windowHeight - 100);
+  sliderA.position(25, windowHeight - 100);
   
   sliderS = createSlider(2, 20, random(3,10));
-  sliderS.position(15, windowHeight - 70);
+  sliderS.position(25, windowHeight - 70);
   
   sliderR = createSlider(0, 90, 0);
-  sliderR.position(15, windowHeight - 40);
+  sliderR.position(25, windowHeight - 40);
   
   // button = createButton('random');
   // button.position(8, 130);

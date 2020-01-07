@@ -5,22 +5,20 @@ function setup() {
 noLoop();
 
   slider = createSlider(6.25, 100, 50);
-  slider.position(25, windowHeight - 40);
+  slider.position(width/2.1,height-75);
   slider.style('width', '150px');
 
-  // sliderStroke = createSlider(1, 7, 3);
-  // sliderStroke.position(20, 50);
-  // sliderStroke.style('width', '150px');
-  // redraw();
+  buttonR = createButton("redraw");
+  buttonR.position(width/2,height-50);
+  buttonR.mouseClicked(refresh);
 }
 
 function draw() {
 
-  background("gold");
-  stroke('darkblue');
-  strokeWeight(2)
+  background("pink");
+  stroke('black');
+  strokeWeight(1)
 
-// let density = ;
 let blockW = windowWidth /slider.value();
 
 for (y=0; y < height; y = y + blockW) {
@@ -34,13 +32,13 @@ else {
 } }
 
 // end  draw
-// frameRate(1);
 }
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
-// function mousePressed() {
-//   clear();
-//   redraw();
-// }
+
+function refresh() {
+  clear();
+  redraw();
+}
