@@ -5,11 +5,11 @@ function setup() {
 noLoop();
 
   slider = createSlider(6.25, 100, 50);
-  slider.position(width/2.1,height-75);
-  slider.style('width', '150px');
+  slider.position(25, windowHeight - 100);
+  slider.class('slider')
 
   button = createButton("shuffle");
-  button.position(20,height - 175);
+  button.position(width/2 - 60 ,height - 75);
   button.mouseClicked(refresh);
   button.class('button')
 }

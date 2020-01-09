@@ -6,7 +6,7 @@ function setup() {
   fill('pink')
     
   button = createButton("shuffle");
-  button.position(20,height - 175);
+  button.position(width/2 - 60 ,height - 75);
   button.mouseClicked(refresh);
   button.class('button')
   }

@@ -4,24 +4,21 @@ function setup() {
   noFill()
   
   sliderCR = createSlider(40, 250, random(40,200));
-  sliderCR.position(25, windowHeight - 145);
+  sliderCR.position(25, windowHeight - 200);
   sliderCR.class('slider')
 
   sliderA = createSlider(6, 60, random(6,40));
-  sliderA.position(25, windowHeight - 110);
+  sliderA.position(25, windowHeight - 150);
   sliderA.class('slider')
 
   sliderS = createSlider(2, 20, random(3,10));
-  sliderS.position(25, windowHeight - 75);
+  sliderS.position(25, windowHeight - 100);
   sliderS.class('slider')
 
   sliderR = createSlider(0, 90, 0);
-  sliderR.position(25, windowHeight - 40);
+  sliderR.position(25, windowHeight - 50);
   sliderR.class('slider')
 
-  // button = createButton('random');
-  // button.position(8, 130);
-  // button.mousePressed(randoms);
 }
 
   function draw() {

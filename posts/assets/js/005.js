@@ -25,14 +25,9 @@ function setup() {
   sliderG = createSlider(2 ,10,6);
   sliderG.position(20, windowHeight-100);
   sliderG.class('slider')
-  // sliderG.size(sW, 2);
-
-  // slider.attribute('name');
   
   sliderP = createSlider(5,50, 10);
   sliderP.position(20, windowHeight-50);
-
-
   sliderP.class('slider')
   
   button = createButton("redraw");
