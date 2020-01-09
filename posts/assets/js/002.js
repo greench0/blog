@@ -5,14 +5,15 @@ function setup() {
   stroke('blue')
   fill('pink')
     
-        buttonR = createButton("redraw");
-    buttonR.position(width/2,height-50);
-    buttonR.mouseClicked(refresh);
+  button = createButton("shuffle");
+  button.position(20,height - 175);
+  button.mouseClicked(refresh);
+  button.class('button')
   }
   
   
   function draw() {
-    background("lightgrey");
+    background("white");
 
   translate(width/2, height/2)
   

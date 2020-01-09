@@ -12,7 +12,7 @@ html, body {
 
 h1 {
   font-weight:400;
-  font-size: 2.25em;
+  font-size: 2.5em;
   color: white;
 }
 
@@ -97,7 +97,7 @@ h1 {
     
     .previous, .next {
       background-color: #f1f1f1;
-      opacity: 75%;
+      opacity: 80%;
       color: black;
     }
     
@@ -140,4 +140,55 @@ h1 {
     }
 
   
+
+
+  .button {
+    backface-visibility: hidden;
+  position: relative;
+  cursor: pointer;
+  display: inline-block;
+  white-space: nowrap;
+  background: #f1f1f1;
+  border-radius: 0px;
+  border: 04px solid white;
+  border-width: 04px 04px 04px 04px;
+  padding: 8px 25px 8px 25px;
+    color: black;
+  font-size: 20px;
+  font-family: Helvetica Neue;
+  font-weight: 400;
+  opacity: 80%;
+  filter: alpha(opacity=50); /* For IE8 and earlier */
+  }
+
+
+.slider {
+  -webkit-appearance: none;
+  width: 275px;
+  height: 2px;
+  border-radius: 5px;  
+  background: white;
+  outline: none;
+  opacity: 80%;
+  -webkit-transition: .2s;
+  transition: opacity .2s;
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border-radius: 50%; 
+  background: white;
+  cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+  width: 25px;
+  height: 25px;
+  border-radius: 50%;
+  background: white;
+  cursor: pointer;
+}
     

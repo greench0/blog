@@ -8,16 +8,18 @@ noLoop();
   slider.position(width/2.1,height-75);
   slider.style('width', '150px');
 
-  buttonR = createButton("redraw");
-  buttonR.position(width/2,height-50);
-  buttonR.mouseClicked(refresh);
+  button = createButton("shuffle");
+  button.position(20,height - 175);
+  button.mouseClicked(refresh);
+  button.class('button')
 }
+
 
 function draw() {
 
   background("pink");
   stroke('black');
-  strokeWeight(1)
+  strokeWeight(2)
 
 let blockW = windowWidth /slider.value();
 
