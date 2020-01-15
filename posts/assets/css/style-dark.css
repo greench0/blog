@@ -35,11 +35,11 @@ h1, h6 {
     }
     
 
-    .dot {
+    .close-button {
       border-color: black;
       color:  black;
     }
-    .dot:hover {
+    .close-button:hover {
       color: black;
       border-color: darkslategray;
 

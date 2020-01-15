@@ -19,6 +19,10 @@ function setup() {
   sliderR.position(25, windowHeight - 50);
   sliderR.class('slider')
 
+  // buttonSave = createButton("save")
+  // buttonSave.position(width/2 +50 ,height - 75)
+  // buttonSave.mouseClicked(saving)
+  // buttonSave.class('button')
 }
 
   function draw() {
@@ -61,4 +65,9 @@ function polygon(x, y, radius, npoints) {
 
 function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
+}
+
+function saving() {
+  save("mySVG.svg"); // give file name
+  print("saved svg");
 }

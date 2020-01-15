@@ -1,14 +1,19 @@
 const colors = ['#FF0199', '#01BFFF', '#2F319F']
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight, SVG)
   angleMode(DEGREES)
   noLoop()
   
   button = createButton("shuffle");
-  button.position(width/2 - 60 ,height - 75);
+  button.position(width/2 - 100 ,height - 75);
   button.mouseClicked(refresh);
   button.class('button')
+
+  buttonSave = createButton("save")
+  buttonSave.position(width/2 +50 ,height - 75)
+  buttonSave.mouseClicked(saving)
+  buttonSave.class('button')
 }
 
 function draw() {
@@ -43,6 +48,11 @@ function windowResized() {
 
 // function refresh
 function refresh() {
-  clear();
-  redraw();
+  canvas.getContext('2d').clearRect(0,0,width,height);
+redraw();
+}
+
+function saving() {
+save("mySVG.svg"); // give file name
+print("saved svg");
 }

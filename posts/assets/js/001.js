@@ -1,7 +1,7 @@
 let slider;
 
 function setup() {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(windowWidth, windowHeight, SVG);
 noLoop();
 
   slider = createSlider(6.25, 100, 50);
@@ -9,9 +9,14 @@ noLoop();
   slider.class('slider')
 
   button = createButton("shuffle");
-  button.position(width/2 - 60 ,height - 75);
+  button.position(width/2 - 100 ,height - 75);
   button.mouseClicked(refresh);
   button.class('button')
+
+  buttonSave = createButton("save")
+  buttonSave.position(width/2 +50 ,height - 75)
+  buttonSave.mouseClicked(saving)
+  buttonSave.class('button')
 }
 
 
@@ -41,6 +46,11 @@ function windowResized() {
 }
 
 function refresh() {
-  clear();
-  redraw();
+  canvas.getContext('2d').clearRect(0,0,width,height);
+redraw();
+}
+
+function saving() {
+save("mySVG.svg"); // give file name
+print("saved svg");
 }

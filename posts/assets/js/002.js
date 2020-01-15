@@ -1,19 +1,28 @@
 function setup() {
-  createCanvas(windowWidth,windowHeight);
+  createCanvas(windowWidth, windowHeight, SVG);
   noLoop()
   rectMode(CENTER);
-  stroke('blue')
-  fill('pink')
-    
+  stroke('black')
+strokeWeight(3)
   button = createButton("shuffle");
-  button.position(width/2 - 60 ,height - 75);
+  button.position(width/2 - 100 ,height - 75);
   button.mouseClicked(refresh);
   button.class('button')
+
+  buttonSave = createButton("save")
+  buttonSave.position(width/2 +50 ,height - 75)
+  buttonSave.mouseClicked(saving)
+  buttonSave.class('button')
   }
   
   
   function draw() {
-    background("white");
+    // background("white");
+
+    let colors = ['pink', 'blue', 'orange']
+
+    let randomC = random(colors)
+    fill(randomC)
 
   translate(width/2, height/2)
   
@@ -84,13 +93,21 @@ function setup() {
   point(recW2 ,- recH2)
   
   pop()
+  // end draw
   }
   
+
+
   function windowResized() {
       resizeCanvas(windowWidth, windowHeight);
     }
   
     function refresh() {
-    clear();
-    redraw();
+        canvas.getContext('2d').clearRect(0,0,width,height);
+      redraw();
+    }
+
+  function saving() {
+    save("mySVG.svg"); // give file name
+    print("saved svg");
   }
